@@ -1,1 +1,61 @@
-# Helm chart values
+provider: aws
+
+# Service account configuration
+serviceAccount:
+  name: external-dns-sa
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::339712880523:role/external-dns-20241224155222735900000002
+
+# Domain filters: restrict external-dns to specific domains
+# domainFilters:
+#   - example.com
+
+# # ID used to differentiate ownership of DNS records
+# txtOwnerId: ex-aws-eks-playground
+
+# # Policy for DNS record changes
+# policy: upsert-only
+
+# # Sources for DNS records
+# sources:
+#   - ingress
+
+# # Enable service to service discovery
+# service:
+#   enabled: true
+#   type: ClusterIP
+#   annotations: {}
+
+# # Metrics and logging
+# metrics:
+#   enabled: true
+#   serviceMonitor:
+#     enabled: false
+
+# # Leader election settings
+# leaderElection:
+#   namespace: kube-system
+
+# # Image settings
+# image:
+#   registry: k8s.gcr.io
+#   repository: external-dns/external-dns
+#   tag: latest
+#   pullPolicy: IfNotPresent
+
+# # Resources and limits
+# resources:
+#   requests:
+#     cpu: 100m
+#     memory: 128Mi
+#   limits:
+#     cpu: 200m
+#     memory: 256Mi
+
+# # Node affinity and tolerations
+# nodeSelector: {}
+# tolerations: []
+# affinity: {}
+
+# # Additional arguments for external-dns
+# extraArgs: []
