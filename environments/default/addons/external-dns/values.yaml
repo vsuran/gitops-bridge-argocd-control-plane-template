@@ -1,6 +1,6 @@
-provider: aws
-serviceAccount:
-  name: external-dns-sa
-  create: true
-  annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::992382667543:role/external-dns-20241224190859946500000025
+# provider: aws
+# serviceAccount:
+#   name: external-dns-sa
+#   create: true
+#   annotations:
+#     eks.amazonaws.com/role-arn: arn:aws:iam::992382667543:role/external-dns-20241224190859946500000025
