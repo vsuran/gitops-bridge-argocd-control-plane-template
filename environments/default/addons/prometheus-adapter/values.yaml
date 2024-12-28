@@ -1,2 +1,3 @@
 prometheus:
-  url: http://kube-prometheus-stack-prometheus.kube-prometheus-stack.svc:9090
+  url: http://kube-prometheus-stack-prometheus.kube-prometheus-stack.svc
+  port: 9090
